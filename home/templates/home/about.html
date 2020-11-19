@@ -1,0 +1,112 @@
+{% extends 'home/layout.html' %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home/app.css' %}">
+<link rel="stylesheet" href="{% static 'home/about.css' %}">
+		 <script src="https://kit.fontawesome.com/e8ff83bdae.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<title>About</title>
+{% endblock %}
+
+{% block body %}
+
+<body>
+
+    <div class="main-header">
+			<div class="main-header-inner" style="background:url({% static 'home/imgs/med.jpg' %})">
+        <h1>ABOUT US</h1>
+      </div>
+    </div>
+    <div class="about-container" data-aos="fade-left">
+      <h1>TEAM<span>PLASCOVID</span></h1>
+      <p>We are a part of society and during these tough time we a team have decided to help our society in every way possible so we designed a webportal known as Plascovid to reach out and help every person out there suffering from COVID-19 and help them with everyway possible</p>
+    </div>
+
+    <div class="devlopers-container">
+      <div class="dev-heading" data-aos="fade-right">
+        <h1>DEVELOPER<span>S</span></h1>
+      </div>
+      <div class="dev-card"  data-aos="fade-left">
+			  <img src="{% static 'home/imgs/harsh.jpeg' %}" alt="" />
+        <div class="dev-details">
+          <h1>HARSH</h1>
+          <p>
+A very disciplined person who believes failure is the key to success. I live by certain rules which defines me. I strongly believe life is mixed combination of trial and error. Besides this I am a tech enthusiast who loves exploring new fields.
+<br><br> Front-End Devloper
+          </p>
+          <p class="dev-links">
+            <a class="fb" href="#"><span class="fab fa-facebook"></span></a>
+            <a class="twtr" href="#"><span class="fab fa-twitter"></span></a>
+            <a class="insta" href="#"><span class="fab fa-instagram"></span></a>
+            <a class="utube" href="#"><span class="fab fa-youtube"></span></a>
+          </p>
+        </div>
+      </div>
+      <div class="dev-card devtwo" data-aos="fade-right">
+			  <img src="{% static 'home/imgs/mittal.jpeg' %}" alt="" />
+        <div class="dev-details">
+          <h1>SHUBHAM MITTAL</h1>
+          <p>
+		  A person whose aim is to learn, grow and become a better person than i was yesterday . I believe that the purpose of life is too help others . I am a backend devloper and someone who is extremly fascinated by this world of programming. <br><br> Backend Devloper  
+          </p>
+          <p class="dev-links">
+            <a class="fb" href="#"><span class="fab fa-facebook"></span></a>
+            <a class="twtr" href="#"><span class="fab fa-twitter"></span></a>
+            <a class="insta" href="#"><span class="fab fa-instagram"></span></a>
+            <a class="utube" href="#"><span class="fab fa-youtube"></span></a>
+          </p>
+        </div>
+      </div>
+      <div class="dev-card"  data-aos="fade-left">
+			  <img src="{% static 'home/imgs/divyanshu.jpg' %}" alt="" />
+        <div class="dev-details">
+          <h1>DIVYANSHU SINGH</h1>
+		  <p>A web devloper who is also a Data Science enthusiast . I am a person  who likes to automate stuff and solve real world problems with the help of programming  . I  like to learn new things and apply them to create something good <br><br> Research and Data Analyst   </p>
+          <p class="dev-links">
+            <a class="fb" href="#"><span class="fab fa-facebook"></span></a>
+            <a class="twtr" href="#"><span class="fab fa-twitter"></span></a>
+            <a class="insta" href="#"><span class="fab fa-instagram"></span></a>
+            <a class="utube" href="#"><span class="fab fa-youtube"></span></a>
+          </p>
+        </div>
+      </div>
+    </div>
+	<div class="footer"></div>
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+		  AOS.init({
+				  offset:400,
+				  duration:1000,
+				  anchorPlacement:'top-bottom'
+		  });
+  </script>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

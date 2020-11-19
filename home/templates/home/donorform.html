@@ -1,0 +1,132 @@
+{% extends 'home/layout.html' %}
+  {% load static %}
+  {% block css %}
+    <!-- Custom CSS -->
+	<link rel="stylesheet" href="{% static 'home/app.css' %}">
+<title>Donor Form</title>
+
+  {% endblock %}
+{% block body %}
+  <section class="donor" id="donor" >
+    <div class="container mb-5 mt-5">
+        <h1>DONOR REGISTRATION FORM</h1>
+        <div class="card" style="width: 50rem; margin: 0 auto;">
+            <div class="card-body">
+					<form action="{% url 'submissions' %}" method="POST">
+							{% csrf_token %}
+                    <div class="form-group row">
+                      <div class="col-12 col-md-2 col-form-label">
+                        <label for="name" class="col-form-label">Name:</label>
+                      </div>
+                      <div class="col-12 col-md-10 pt-2">
+                        <input  required type="text" class="form-control" name="name" id="name">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-2 col-form-label">
+                        <label for="phone" class="col-form-label">Mail:</label>
+                      </div>
+                      <div class="col-12 col-md-10 pt-2">
+                        <input required type="tel" class="form-control" id="phone" name="mail">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-2 col-form-label">
+                        <label for="phone" class="col-form-label">Mobile:</label>
+                      </div>
+                      <div class="col-12 col-md-10 pt-2">
+                        <input required type="tel" class="form-control" id="phone" name="phone">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-2 col-form-label">
+                        <label for="age" class="col-form-label">Age:</label>
+                      </div>
+                      <div class="col-12 col-md-10 pt-2"> <input required type="number" class="form-control" id="age" name="age">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-2 col-form-label">
+                        <label for="Address" class="col-form-label">Address:</label>
+                      </div>
+                      <div class="col-12 col-md-10 pt-2">
+                        <input required type="text" class="form-control" id="Address" name="address">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-2 col-form-label">
+                        <label for="city" class="col-form-label">City:</label>
+                      </div>
+                      <div class="col-12 col-md-10 pt-2">
+                        <input required type="text" class="form-control" id="city" name="city">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-2 col-form-label">
+                        <label for="blood" class="col-form-label">Blood Group:</label>
+                      </div>
+                      <div class="col-12 col-md-10 pt-2">
+   <select class="custom-select" id="inputGroupSelect01" name="bloodgroup" required="true">
+    <option selected>Bloodgroup</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+  </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-4 col-form-label">
+                        <label for="covid" class="col-form-label">Sex:</label>
+                      </div>
+                      <div class="col-12 col-md-8 pt-3">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input" required type="radio" name="sex" id="male" value="M">
+                          <label class="custom-control-label" for="male">Male</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input" required type="radio" name="sex" id="female" value="F">
+                          <label class="custom-control-label" for="female">Female</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input" required type="radio" name="sex" id="other" value="O">
+                          <label class="custom-control-label" for="other">Others</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-4 col-form-label">
+                        <label for="covid" class="col-form-label">Did you ever get Covid:</label>
+                      </div>
+                      <div class="col-12 col-md-8 pt-3">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input" required type="radio" name="covid" id="yes" value="Y">
+                          <label class="custom-control-label" for="yes">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input" required type="radio" name="covid" id="no" value="N">
+                          <label class="custom-control-label" for="no">No</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-4 col-form-label">
+                        <label for="date" class="col-form-label">Date of Screening:</label>
+                      </div>
+                      <div class="col-12 col-md-8 pt-2">
+                        <input required type="date" class="form-control" id="date" name="date">
+                      </div>
+                    </div>
+                    <input class="btn servicc" type="submit" value="Submit">
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  {% endblock %}

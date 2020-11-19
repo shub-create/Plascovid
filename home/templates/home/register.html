@@ -1,0 +1,61 @@
+{% extends 'home/layout.html' %}
+  {% load static %}
+  {% block css %}
+    <!-- Custom CSS -->
+	<link rel="stylesheet" href="{% static 'home/app.css' %}">
+<title>Register</title>
+
+  {% endblock %}
+  {% block body %}
+
+  {% if receivers == True %}
+
+  <section class="register" id="register" style="min-height:70vh" >
+    <div class="container mb-5 mt-5">
+        <h1>REGISTER NOW</h1>
+        <div class="card" style="width: 70rem; margin: 0 auto;">
+            <div class="card-body">
+                <h4>Kindly read the following instructions before applying for getting donation</h4>
+                <ul class="reg">
+                    <li>We request you not to spam others </li>
+                    <li>Please be respectful towards those you contact and those who contact you </li>
+                  </ul>  
+                  <h4>Terms and Condition</h4>
+                  <ul class="reg">
+                    <li>Your information will be available on our portal.</li>
+                    <li>Your personal details will be shared with others.</li>
+                    <li>Your phone number will be avaiable on our website so that people can contact you</li>
+                  </ul>
+				  <a href="{% url 'receiverform' %}" class="btn servic"> Register </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  {% else %}
+  <section class="register" id="register" style="min-height:70vh">
+    <div class="container mb-5 mt-5">
+        <h1>REGISTER NOW</h1>
+        <div class="card" style="width: 70rem; margin: 0 auto;">
+            <div class="card-body">
+                <h4>Kindly read the following instructions before saving the life of others</h4>
+                <ul class="reg">
+                    <li>YOU are between 18-60 years of age.</li>
+                    <li>YOU were a COVID Positive patient.</li>
+                    <li>YOU are now negative after infection</li>
+                    <li>You have now been cured for 14 days</li>
+                  </ul>  
+                  <h4>Terms and Condition</h4>
+                  <ul class="reg">
+                    <li>Your information will be available on our portal.</li>
+                    <li>Your personal details will be shared with others.</li>
+                    <li>Your phone number will be avaiable on our website so that people can contact you</li>
+                  </ul>
+				  <a href="{% url 'donorform' %}" class="btn servic"> Register </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %} 

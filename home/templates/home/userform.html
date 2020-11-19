@@ -1,0 +1,31 @@
+{% extends 'home/layout.html' %}
+  {% load static %}
+  {% block css %}
+    <!-- Custom CSS -->
+	<link rel="stylesheet" href="{% static 'home/app.css' %}">
+<title>Create Account</title>
+
+{% endblock %}
+
+{% block body %}
+<div class="createaccount" style="min-height:85vh; width:1100px;display:flex;flex-direction:column;align-items:center;margin:auto" >
+		<h3>CREATE ACCOUNT</h3>
+		{% if userexists == True %}
+		<div class="alert alert-primary" role="alert">
+			The username	{{ username  }}  is already taken
+		</div>
+		{% endif %}
+		<div class="logincard" style="min-width:300px;max-width:600px; height:400px;background-color:white;border-radius:10px" >
+				<form action="{% url 'userform' %}" method="POST" style="height:100%;width:100%">
+						{% csrf_token %}
+				<div class="login-container" style="display:grid;place-items:center;height:100%;padding:2rem">
+				<input type="text" aria-label=" Username " placeholder="Username" class="form-control" name="username"  >
+				<input type="text" aria-label="email" class="form-control" name="email"  placeholder="email">
+				<input type="password" aria-label=" password" class="form-control" name="password"  placeholder="password">
+				<input type="submit" class="btn btn-success" value="Create Account">
+				<a href="">Already have an account ? Login </a>
+
+				</div></form>
+		</div>
+</div>
+{% endblock %}

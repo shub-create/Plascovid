@@ -1,0 +1,30 @@
+.popup-container {
+       height:100%;
+	   width:100%;
+	   position:fixed;
+	   background-color:rgba(0,0,0,0.8);
+	   z-index:10;
+	   display:block;
+}
+.popup{
+		top:25%;
+		background-color:white;
+		margin:auto;
+		width:900px;
+		position:relative;
+		font-size:30px;
+		font-weight:1000;
+}
+.result{
+		text-align:center;
+		padding:2rem;
+	   font-family:'Secular One', sans-serif;
+}
+.close-button{
+		position:absolute;
+		top:0;
+		right:10px;
+		font-size: 40px;
+		transform:rotate(45deg);
+		cursor:pointer;
+}
